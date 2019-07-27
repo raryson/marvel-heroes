@@ -1,6 +1,3 @@
 import md5 from 'md5';
 
-export const createHash = (publicKey: String, privateKey: String) => {
-  const timeStamp = Date.now()
-  return md5(`${timeStamp}${publicKey}${privateKey}`)
-}
+export const createHash = (publicKey: String, privateKey: String, timeStamp: number) => md5(`${timeStamp}${publicKey}${privateKey}`)
